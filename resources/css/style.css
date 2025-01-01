@@ -1,0 +1,21 @@
+.sidebar{
+    background-color: #FFB1B1;
+    height: 100vh;
+}
+body{
+    overflow-x: hidden;
+}
+.dataku .card ul li{
+    list-style: none;
+}
+
+.index-barang .btn-tambah {
+    background-color: #FF9843;
+    color: white;
+}
+.dataku .container{
+    background-color: #FFB1B1;
+}
+.sidebar{
+    background-color: #133E87;
+}
