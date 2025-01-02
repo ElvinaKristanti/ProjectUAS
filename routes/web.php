@@ -1,8 +1,5 @@
 <?php
 
-use App\Http\Controllers\ProfileController;
-use App\Http\Controllers\AuthController;
-use App\Http\Controllers\NilaiController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -20,17 +17,6 @@ Route::get('/dashboard', function () {
     return redirect()->route('students.index');
 })->middleware(['auth', 'verified'])->name('dashboard');
 
-// Rute untuk siswa
-Route::middleware('auth')->group(function () {
-    Route::resource('mapels', MapelController::class);
-    Route::get('mapels/{id}/siswa', [MapelController::class, 'showSiswa'])->name('mapels.siswa');
-});
 
-// Rute untuk profil
-Route::middleware('auth')->group(function () {
-    Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
-    Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
-    Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
-});
 
-require __DIR__ . '/auth.php';
+
